@@ -14,7 +14,6 @@ void menu();
 void inicializar();
 void pop();
 void push();
-void exibirElemento();
 //--------------------------
 
 
@@ -26,15 +25,14 @@ int main()
 void menu()
 {
 	int op = 0;
-	while (op != 5) {
+	while (op != 4) {
 		system("cls"); // somente no windows
 		cout << "Menu Pilha";
 		cout << endl << endl;
 		cout << "1 - Inicializar Pilha \n";
 		cout << "2 - Inserir elemento (Push) \n";
 		cout << "3 - Remover elementos (Pop) \n";
-		cout << "4 - exibir elementos \n";
-		cout << "5 - Sair \n";
+		cout << "4 - Sair \n";
 
 
 		cout << "Opcao: ";
@@ -44,13 +42,11 @@ void menu()
 		{
 		case 1: inicializar();
 			break;
-		case 2:push();
+		case 2: push();
 			break;
 		case 3: pop();
 			break;
-		case 4: exibirElemento();
-			break;
-		case 5:
+		case 4:
 			return;
 		default:
 			break;
@@ -103,12 +99,12 @@ void pop()
 	}
 	else
 	{
-		NO* apagar = topo;
+		NO* Excluir = topo;
 
 		topo = topo->prox;
 
-		cout << "O numero " << apagar->valor << " foi removido." << endl;
+		cout << "O numero " << Excluir->valor << " foi removido." << endl;
 
-		free(apagar);
-	}
+		free(Excluir);
+	} 
 }
