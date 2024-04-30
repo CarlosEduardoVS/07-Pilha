@@ -112,22 +112,3 @@ void pop()
 		free(apagar);
 	}
 }
-
-
-void exibirElemento() {
-
-	if (topo == NULL)
-	{
-		cout << "Vazia." << endl;
-	}
-	else
-	{
-		cout << "Elementos: \n";
-		NO* aux = topo;
-		while (aux != NULL)
-		{
-			cout << aux->valor << endl;
-			aux = aux->prox;
-		}
-	}
-}
